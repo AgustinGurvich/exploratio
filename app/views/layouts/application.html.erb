@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield(:title)%> |Exploratio</title>
+    <title><%= full_title(yield(:title))%></title>
     <%= csrf_meta_tags %>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +13,34 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-fixed-top">
+      <div class='container-fluid'>
+        <div class='row'>
+          <!-- Opciones -->
+          <div class='col-xs-3 col-md-3 col-lg-3'>
+            <button type="button" class="btn btn-default boton"><span class='glyphicon glyphicon-menu-hamburger'></span></button>
+          </div>
+          <!-- Titulo -->
+          <div class='col-xs-6 col-md-6 col-lg-6 titulo'>
+            eXploratio
+          </div>
+          <!-- Buscador -->
+          <div class='col-xs-3 col-md-3 col-lg-3'>
+                <button type="button" class="btn btn-default boton" id='lupa' data-toggle="modal" data-target="#myModal"><span class='glyphicon glyphicon-search'></span></button>
+          </div>
+        </div>
+      </div>
+  <!-- Menu opciones -->
+    <div class='container-fluid' id='opciones'>
+          <%= link_to "Mapa",   '#' %><br/>
+          <%= link_to "Busqueda",   '#' %><br/>
+          <%= link_to "Eventos",   '#' %>br/>
+    </div>
+
+    <!-- Fin navbar -->
+  </nav>
+  <div class = 'container'>
     <%= yield %>
+  </div>
   </body>
 </html>

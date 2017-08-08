@@ -8,13 +8,13 @@ class EventosControllerTest < ActionDispatch::IntegrationTest
   test "should get listaev" do
     get eventos_listaev_url
     assert_response :success
-    assert_select "title", "Lista de Eventos |Exploratio"
+    assert_select "title", "Exploratio"
   end
 
   test "should get extensionev" do
     get eventos_extensionev_url
     assert_response :success
-    assert_select "title", "Extensión Evento |Exploratio"
+    assert_select "title", "Exploratio"
   end
 
 end
