@@ -22,17 +22,17 @@
             <button type="button" class="btn btn-default boton"><span class='glyphicon glyphicon-menu-hamburger'></span></button>
           </div>
           <!-- Titulo -->
-          <div class='col-xs-6 col-md-6 col-lg-6 titulo'>
+          <div class='col-xs-6 col-md-6 col-lg-6 titulo-nav'>
             eXploratio
           </div>
           <!-- Buscador -->
           <div class='col-xs-3 col-md-3 col-lg-3'>
-                <button type="button" class="btn btn-default boton" id='lupa' data-toggle="modal" data-target="#myModal"><span class='glyphicon glyphicon-search'></span></button>
+                <button type="button" class="btn btn-default boton" id='lupa-nav' data-toggle="modal" data-target="#myModal"><span class='glyphicon glyphicon-search'></span></button>
           </div>
         </div>
       </div>
   <!-- Menu opciones -->
-    <div class='container-fluid' id='opciones'>
+    <div class='container-fluid' id='opciones-nav'>
           <%= link_to "Mapa",   '#' %><br/>
           <%= link_to "Busqueda",   '#' %><br/>
           <%= link_to "Eventos",   '#' %>br/>
@@ -40,6 +40,115 @@
 
     <!-- Fin navbar -->
   </nav>
+  <!-- Inicio Modal -->
+  <div class='container-fluid text-center'>
+    <div class='row'>
+      <div class='col-md-1'></div>
+      <div class='col-md-10 col-xs-10'>
+      <form method="post" >
+        <fieldset>
+
+  	<div class="row">
+              <div class="col-md-4 col-xs-12 text-center">
+                  <h3>Fecha</h3><br />
+                      <div class="row box well">
+                              <div class="col-md-12 dates">
+                                  <p class="texto">Desde</p>
+                                  <input type="date" class="fecha" name="dia" maxlength="10"/>
+                              </div>
+                              <div class="col-md-12 dates">
+                                  <p class="texto">Hasta<p>
+                                  <input type="date" class="fecha" name="dia" maxlength="10"/>
+                              </div>
+                          </div>
+              </div>
+              <div class="col-md-8 col-xs-12">
+                      <h3>Actividades</h3><br />
+                          <div class="box well">
+                              <div class="checkbox row">
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Artes Visuales</p>
+                                  <div class="col-lg-2"></div>
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" name="">Salud</p>
+                              </div>
+                              <div class="checkbox row">
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Música</p>
+                                  <div class="col-lg-2"></div>
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Muestras</p>
+                              </div>
+                              <div class="checkbox row">
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Teatro</p>
+                                  <div class="col-lg-2"></div>
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Infantiles</p>
+                              </div>
+
+                              <div id="oculto" class="hide">
+                              <div class="checkbox row">
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Medio ambiente</p>
+                                  <div class="col-lg-2"></div>
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" name="">Movilidad</p>
+                              </div>
+                              <div class="checkbox row">
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Visitas guiadas</p>
+                                  <div class="col-lg-2"></div>
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Economía Solidaria</p>
+                              </div>
+                              <div class="checkbox row">
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Danza</p>
+                                  <div class="col-lg-2"></div>
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Artes urbanas</p>
+                              </div>
+                              <div class="checkbox row">
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Capacitación</p>
+                                  <div class="col-lg-2"></div>
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Mascotas</p>
+                              </div>
+                              <div class="checkbox row">
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Festivales</p>
+                                  <div class="col-lg-2"></div>
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Plan Estratégico</p>
+                              </div>
+                              <div class="checkbox row">
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Discapacidad</p>
+                                  <div class="col-lg-2"></div>
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Deporte y aire libre</p>
+                              </div>
+                              <div class="checkbox row">
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Trámites</p>
+                                  <div class="col-lg-2"></div>
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Diversidad</p>
+                              </div>
+                              <div class="checkbox row">
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Concursos y convocatorias</p>
+                                  <div class="col-lg-2"></div>
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Presupuesto Participativo</p>
+                              </div>
+                              <div class="checkbox row">
+                                  <p class="checkbox-inline col-lg-5 col-xs-5"><input type="checkbox" value="">Charlas y Congresos</p>
+                                  <div class="col-lg-2"></div>
+
+                              </div>
+                          </div>
+                              <a id="ver-mas">Ver más</a>
+                          </div>
+              </div>
+          </div>
+
+
+  	<div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-8">
+
+              </div>
+          </div>
+            <br/>
+
+        <button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-search"></span> Buscar</button>
+      </fieldset>
+    </form>
+  </div>
+  </div>
+  </div>
+  <!-- Fin Modal -->
   <div class = 'container'>
     <%= yield %>
   </div>
