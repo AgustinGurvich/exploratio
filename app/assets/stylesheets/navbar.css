@@ -1,0 +1,25 @@
+#lupa-nav{
+  float:right;
+}
+
+.titulo-nav{
+  text-align: center;
+/*   width: 100%; */
+  height: 100%;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+/*.opt{
+  width:100%;
+  text-align: left;
+}*/
+
+#opciones-nav{
+  display:none;
+}
+
+/*.close {
+    margin-right: 5px;
+}*/
