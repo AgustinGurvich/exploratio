@@ -2,25 +2,28 @@
   <div class='container-fluid'>
     <div class='row'>
       <!-- Opciones -->
-      <div class='col-xs-3 col-md-3 col-lg-3'>
-        <button type="button" class="btn btn-default boton"><span class='glyphicon glyphicon-menu-hamburger'></span></button>
-      </div>
+      <%= content_tag :div, class:["col-xs-3", "col-md-3", "col-lg-3"] do %>
+        <%= button_tag  "", type:'button', class:["btn", "btn-default", "boton"] do%>
+          <%= content_tag :span, "", class:["glyphicon", "glyphicon-menu-hamburger"] %>
+        <% end %>
+      <% end %>
       <!-- Titulo -->
-      <div class='col-xs-6 col-md-6 col-lg-6 titulo-nav'>
+      <%= content_tag :div, class:["col-xs-6", "col-md-6", "col-lg-6", "titulo-nav"] do %>
         eXploratio
-      </div>
+      <% end %>
       <!-- Buscador -->
-      <div class='col-xs-3 col-md-3 col-lg-3'>
-            <button type="button" class="btn btn-default boton" id='lupa-nav' data-toggle="modal" data-target="#myModal"><span class='glyphicon glyphicon-search'></span></button>
-      </div>
+      <%= content_tag :div, class:["col-xs-3", "col-md-3", "col-lg-3"] do %>
+        <%= button_tag  "", type:'button', class:["btn", "btn-default", "boton"], id:'lupa-nav', data: {toggle:'modal', target:"#myModal"} do%>
+          <%= content_tag :span, "", class:["glyphicon", "glyphicon-search"] %>
+        <% end %>
+      <% end %>
     </div>
   </div>
 <!-- Menu opciones -->
-<div class='container-fluid' id='opciones-nav'>
-      <%= link_to "Mapa",   '#' %><br/>
-      <%= link_to "Busqueda",   '#' %><br/>
-      <%= link_to "Eventos",   '#' %>br/>
-</div>
-
+  <%= content_tag :div, class:["container-fluid"], id:'opciones-nav' do %>
+    <%= link_to "Mapa",   '#' %><br/>
+    <%= link_to "Busqueda",   '#' %><br/>
+    <%= link_to "Eventos",   '#' %>br/>
+  <% end %>
 <!-- Fin navbar -->
 </nav>

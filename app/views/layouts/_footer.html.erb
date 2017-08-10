@@ -1,5 +1,7 @@
 <nav class="navbar navbar-fixed-bottom" id="footer">
-    <div class="container-fluid">
-        <button type="button" class="btn btn-default btn-default-detev boton boton-detev"><span class='glyphicon glyphicon-detev glyphicon-arrow-left'></span></button>
-    </div>
+        <%= content_tag :div, class:["container-fluid"] do %>
+          <%= button_tag  "Volver", type:'button', class:["btn", "btn-default", "btn-default-detev", "boton", "boton-detev"] do%>
+            <%= content_tag :span, "", class:["glyphicon", "glyphicon-detev", "glyphicon-arrow-left"] %>
+          <% end %>
+        <% end %>
 </nav>
