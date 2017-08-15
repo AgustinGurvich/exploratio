@@ -1,0 +1,32 @@
+eve.portfolio-item-listaev {
+    margin-bottom: 25px;
+    text-overflow:ellipsis !important;
+}
+div{
+  /*margin-right: -10px;*/
+}
+.portfolio-item-listaev{
+}
+.row{
+  margin-right: 0px;
+}
+.lugar{
+  color:black;
+}
+h1.listaev{
+  text-align: center;
+}
+.btn-listaev{
+  background-color: #47d72f !important;
+  box-shadow: 2px 2px 2px black;
+}
+#ellipsis{
+  height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  Text-overflow: ellipsis;
+}
+
+.row {
+    margin-bottom:5px;
+}

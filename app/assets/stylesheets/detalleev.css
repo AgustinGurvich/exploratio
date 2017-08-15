@@ -1,0 +1,49 @@
+
+/*  General */
+.body-detev{
+  margin-top: 15vh;
+}
+
+h3{
+  margin-top: 10px;
+  text-align: center;
+}
+
+hr{
+  margin: 20px;
+}
+
+.a-detev, a:hover, a:active{
+  color: #39875E;
+
+}
+.boton-detev{
+  display:block;
+  text-align:center;
+  margin-top: 10px !important;
+}
+
+.btn-default-detev {
+    background-color: #4EB980 !important;
+    border-style: none !important;
+    color: white !important;
+}
+
+
+/* Content */
+.lead-detev{
+    font-size: 17.5px !important;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.caja{
+  padding-top: 20px;
+  border: 2px solid silver;
+  background-color: #eee;
+  margin-left:60px;
+}
+
+.glyphicon-detev{
+  font-size: 15px;
+}
