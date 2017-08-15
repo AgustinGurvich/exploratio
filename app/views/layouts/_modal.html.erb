@@ -1,12 +1,12 @@
-<div class='container-fluid text-center'>
-  <div class='row'>
-    <div class='col-md-1'></div>
-    <div class='col-md-10 col-xs-10'>
-    <form method="post" >
-      <fieldset>
+<%= content_tag :div, class:["container-fluid", "text-center"] do %>
+  <%= content_tag :div, class:["row"] do %>
+    <%= content_tag :div, "" ,class:["col-md-1"] %>
+    <%= content_tag :div, class:["col-md-10", "col-xs-10"] do %>
+    <%= form_tag ("#"), method:["post"] do %>
+      <%= field_set_tag do %>
 
-  <div class="row">
-            <div class="col-md-4 col-xs-12 text-center">
+  <%= content_tag :div, class:["row"] do %>
+            <%= content_tag :div, class:["col-md-4", "col-xs-12", "text-center"] do %>
                 <h3>Fecha</h3><br />
                     <div class="row box well">
                             <div class="col-md-12 dates">
@@ -18,7 +18,7 @@
                                 <input type="date" class="fecha" name="dia" maxlength="10"/>
                             </div>
                         </div>
-            </div>
+            <% end %>
             <div class="col-md-8 col-xs-12">
                     <h3>Actividades</h3><br />
                         <div class="box well">
@@ -88,21 +88,19 @@
                             <a id="ver-mas">Ver más</a>
                         </div>
             </div>
-        </div>
+        <% end %>
 
 
-  <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-8">
-
-            </div>
-        </div>
+  <%= content_tag :div, class:["row"] do %>
+            <%= content_tag :div, " ", class:["col-md-4"] %>
+            <%= content_tag :div, " ", class:["col-md-8"] %>
+        <% end %>
           <br/>
 
       <button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-search"></span> Buscar</button>
-    </fieldset>
-  </form>
-</div>
-</div>
-</div>
+    <%end%>
+  <%end%>
+<% end %>
+<% end %>
+<% end %>
 <!-- Fin Modal -->

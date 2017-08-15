@@ -1,6 +1,6 @@
-<nav class="navbar navbar-fixed-top">
-  <div class='container-fluid'>
-    <div class='row'>
+<%= content_tag :nav, class:["navbar", "navbar-fixed-top"] do %>
+  <%= content_tag :div, class:["container-fluid"] do %>
+    <%= content_tag :div, class:["row"] do %>
       <!-- Opciones -->
       <%= content_tag :div, class:["col-xs-3", "col-md-3", "col-lg-3"] do %>
         <%= button_tag  "", type:'button', class:["btn", "btn-default", "boton"] do%>
@@ -17,8 +17,8 @@
           <%= content_tag :span, "", class:["glyphicon", "glyphicon-search"] %>
         <% end %>
       <% end %>
-    </div>
-  </div>
+    <% end %>
+  <% end %>
 <!-- Menu opciones -->
   <%= content_tag :div, class:["container-fluid"], id:'opciones-nav' do %>
     <%= link_to "Mapa",   '#' %><br/>
@@ -26,4 +26,4 @@
     <%= link_to "Eventos",   '#' %>br/>
   <% end %>
 <!-- Fin navbar -->
-</nav>
+<% end %>
