@@ -9,7 +9,7 @@ class EventosController < ApplicationController
       http.request(Net::HTTP::Get.new(datosURL.to_s))
     }
     @rawJson = resp.body
-        
+
   end
 
   def extensionev
@@ -19,5 +19,11 @@ class EventosController < ApplicationController
       http.request(Net::HTTP::Get.new(datosURL.to_s))
     }
     @Json = JSON.parse(resp.body)
+  end
+
+  def login
+  end
+
+  def newuser
   end
 end

@@ -1,0 +1,14 @@
+.fieldset-newuser{
+  text-align: center;
+}
+.titulo-newuser{
+  text-align: center;
+}
+.body-newuser{
+  margin-top: 40px;
+}
+.form-newuser{
+  border: 1px solid dimgrey;
+  padding:15px;
+  background-color: #ededed;
+}

@@ -17,4 +17,11 @@ class EventosControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "Exploratio"
   end
 
+  test "should get login" do
+    get eventos_login_url
+    assert_response :success
+    assert_select "title", "Exploratio"
+  end
+
+
 end
