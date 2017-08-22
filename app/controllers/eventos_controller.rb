@@ -19,5 +19,8 @@ class EventosController < ApplicationController
       http.request(Net::HTTP::Get.new(datosURL.to_s))
     }
     @Json = JSON.parse(resp.body)
+    if @Json[0] == nil
+      render html: "Error: 404: Not Found"
+    end
   end
 end

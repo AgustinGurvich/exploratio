@@ -101,3 +101,21 @@ window.onload = function()
         }
     }
 }
+
+
+
+var dropdown = document.getElementById("oculto");
+var a = document.getElementById("ver-mas");
+var onClick = function()
+{
+  var action = dropdown.classList.toggle("hide");
+    if(!action)
+    {
+      a.innerHTML = "Ver menos";
+    }
+    else
+    {
+      a.innerHTML = "Ver más";
+    }
+}
+a.addEventListener("click",onClick);
