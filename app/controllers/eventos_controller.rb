@@ -26,4 +26,8 @@ class EventosController < ApplicationController
 
   def newuser
   end
+
+  def crearev
+  end
+  
 end
