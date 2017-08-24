@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   get '/newuser' => 'eventos#newuser'
   get '/eventos/:id' => 'eventos#extensionev'
   get '/crearev' => 'eventos#crearev'
+  get '/error' => 'eventos#error'
   root 'eventos#listaev'
 end

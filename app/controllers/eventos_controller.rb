@@ -29,5 +29,8 @@ class EventosController < ApplicationController
 
   def crearev
   end
+
+  def error
+  end
   
 end
