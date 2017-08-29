@@ -18,26 +18,21 @@ class EventosController < ApplicationController
       |http|
       http.request(Net::HTTP::Get.new(datosURL.to_s))
     }
-    @Json = JSON.parse(resp.body)
-    if @Json[0] == nil
-      render html: "Error: 404: Not Found"
+    jObj = JSON.parse(resp.body)[0]
+    if jObj == nil
+      redirect_to :status => 404
     else
-      @Json = @Json[0]
-      @Title = @Json["title"]
-      @Desc = @Json["texto"]
-      @ImgUri = @Json["uri_imagen"]
-      @Date = @Json["fecha_y_hora_inicio"]
-      if @Json["lugares"].length == 0
-        @Location = nil
-      else
+      if jObj["lugares"].length != 0
         @Location = {
-          "name" => @Json["lugares"][0]["nombre"],
-          "full_addres" => @Json["lugares"][0]["direccion_completa"],
-          "coordx" => @Json["lugares"][0]["coordenada_x"],
-          "coordy" => @Json["lugares"][0]["coordenada_y"]
-        } 
+        "name" => jObj["lugares"][0]["nombre"],
+        "coordx" => jObj["lugares"][0]["coordenada_x"],
+        "coordy" => jObj["lugares"][0]["coordenada_y"]
+        }
+      else
+        @Location = nil
       end
-      @WebSite = @Json["link"]
+      @Title = jObj["title"]
+      @Desc = jObj["texto"]
     end
   end
 end
