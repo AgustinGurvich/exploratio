@@ -9,7 +9,7 @@ class EventosController < ApplicationController
       http.request(Net::HTTP::Get.new(datosURL.to_s))
     }
     @rawJson = resp.body
-        
+
   end
 
   def extensionev
@@ -35,4 +35,17 @@ class EventosController < ApplicationController
       @Desc = jObj["texto"]
     end
   end
+
+  def login
+  end
+
+  def newuser
+  end
+
+  def crearev
+  end
+
+  def error
+  end
+  
 end

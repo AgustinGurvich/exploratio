@@ -10,20 +10,18 @@
         <meta name="author" content="">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'eventos', 'data-turbolinks-track': 'reload'%>
     <%= render 'layouts/defaultrails' %>
     <%= render 'layouts/shim' %>
   </head>
 
   <body>
     <%= render 'layouts/navbar' %>
-    <!-- Fin navbar -->
   </nav>
-  <!-- Inicio Modal -->
   <%= render 'layouts/modal' %>
-  <!-- Fin Modal -->
   <div class = 'container'>
-    <%= yield %>
-    <%= render 'layouts/footer' %>
+        <%= yield %>
+        <%= render 'layouts/footer' %>
   </div>
   </body>
 </html>

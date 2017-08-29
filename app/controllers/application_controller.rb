@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   def not_found
       raise ActionController::RoutingError.new('Not Found')
   end
-  def hola 
+  def hola
     render html: "Hola mundo!"
   end
 end
