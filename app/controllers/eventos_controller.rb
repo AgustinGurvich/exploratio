@@ -25,6 +25,7 @@ class EventosController < ApplicationController
       if jObj["lugares"].length != 0
         @Location = {
         "name" => jObj["lugares"][0]["nombre"],
+        "full_address" => jObj["lugares"][0]["direccion_completa"],
         "coordx" => jObj["lugares"][0]["coordenada_x"],
         "coordy" => jObj["lugares"][0]["coordenada_y"]
         }
@@ -33,6 +34,8 @@ class EventosController < ApplicationController
       end
       @Title = jObj["title"]
       @Desc = jObj["texto"]
+      @Date = jObj["fecha_y_hora_inicio"]
+      @ImgUri = jObj["uri_imagen"]
     end
   end
 
