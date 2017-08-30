@@ -58,6 +58,7 @@ h1 {
 .info-div:hover, .info-div:active {
     background-color: #ddd;
     filter: brightness(110%);
+    border: 1px solid #d1d1d1;
 }
 
 #ellipsis {
