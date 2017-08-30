@@ -1,0 +1,43 @@
+var reqUri = "https://ws.rosario.gov.ar/web/api/agenda.json" + location.search
+
+function httpGET(Uri){
+  var req = new XMLHttpRequest()
+  req.open("GET", Uri, false)
+  req.send(null)
+  return req.responseText
+}
+
+var jsonData = JSON.parse('{"list": ' + httpGET(reqUri) + "}").list[0]
+
+if (jsonData == null){
+    document.getElementsByTagName("body")[0].innerHTML = ""
+    alert("Error. Evento invalido")
+}
+
+document.title = jsonData.title
+eventTitle.innerHTML = jsonData.title
+eventTags.href = '../eventos/eventos.html?etiquetas=' + jsonData.etiquetas
+eventTags.innerHTML = jsonData.etiquetas
+eventLoc.innerHTML = jsonData.lugar_eventual
+eventDate.innerHTML = jsonData.fecha_y_hora_inicio
+eventUri.innerHTML = jsonData.link
+eventUri.href = jsonData.link
+eventImg.src = jsonData.uri_imagen
+if (jsonData.texto != null)
+{
+  eventDesc.innerHTML = jsonData.texto
+}
+else if (eventData.resumen != null)
+{
+  eventDesc.innerHTML = jsonData.resumen
+}
+else
+{
+  console.log(jsonData)
+}
+
+function initMap(){
+}
+
+var map = document.getElementById('map')
+map.src= "https://www.rosario.gov.ar/web/webservices/mapa/mapa.html?x=" + jsonData.lugares[0].coordenada_x + "&y=" + jsonData.lugares[0].coordenada_y + "&nivelZoom=8"
