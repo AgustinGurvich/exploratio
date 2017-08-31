@@ -1,4 +1,4 @@
-var reqUri = "https://ws.rosario.gov.ar/web/api/agenda.json" + "?limit=21"/*+ location.search*/
+var reqUri = "https://ws.rosario.gov.ar/web/api/agenda.json" + "?limit=21"
 
 function stringTrim(text, lng) {
     if (text != null && text.length < lng)

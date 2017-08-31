@@ -108,10 +108,10 @@ switch(month_fin){
 }
 
 if (date_inicio == date_fin && month_inicio == month_fin) { eventDate.innerHTML = date_inicio + " de " + month_inicio }
-else { eventDate.innerHTML = "De " + date_inicio + " de " + month_inicio + " a " + date_fin + " de " + month_fin };
+else { eventDate.innerHTML = "Del " + date_inicio + " de " + month_inicio + " al " + date_fin + " de " + month_fin };
 
 eventUri.innerHTML = jsonData.link
-eventUri.href = jsonData.lugares[0].web
+eventUri.href = jsonData.link
 eventImg.src = jsonData.uri_imagen
 if (jsonData.texto != null)
 {
