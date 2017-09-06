@@ -65,12 +65,11 @@
               <div class="modal-body">
                 <div class='container-fluid text-center' id='buscador'>
                   <div class='row'>
-                    <div class='col-xs-12 col-md-12'>
-                      <form method="post" id='formulario' >
-                        <fieldset>
-
-
-                          <div class="row">
+                    <div class='col-xs-12 col-md-12'>                      
+                      <form method="post" id='formulario' >                                                                  
+                        <fieldset>                                            
+            
+            <div class="row">
             <div class="col-md-4 col-xs-12 text-center">
                 <h4>Fecha</h4><br />
                     <div class="row box well">
@@ -171,14 +170,7 @@
                     </div>
                   </div>
               </div>
-                <div class='row'>
-                  <div class='container-fluid'>
-                    <div class='col-xs-0 col md-11'></div>
-                    <div class='col-xs-12 col md-1'>
-                      <button type="button" class="btn close" data-dismiss="modal">X</button>
-                    </div>
-                  </div>
-                </div>
+                
             </div>
 
           </div>
@@ -225,6 +217,25 @@
 		}
     }
     a.addEventListener("click",onClick);
+    
+    
+    var btn = document.getElementById("lupa");
+    var onClick2 = function() {
+            btn.classList.toggle("lupa-active");
+    }
+    btn.addEventListener("click",onClick2);
+    
+    
+    var modal = document.getElementById("myModal");
+    var onClick3 = function() {
+            btn.classList.toggle("lupa-active");
+    }
+    modal.addEventListener("click",onClick3);
+    var modalcontent = document.getElementsByClassName("modal-content")[0];
+    var onClick3 = function() {
+            btn.classList.toggle("lupa-active");
+    }
+    modalcontent.addEventListener("click",onClick3);
 </script>
   
 </html>

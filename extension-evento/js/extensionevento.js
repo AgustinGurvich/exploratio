@@ -107,7 +107,11 @@ switch(month_fin){
         break;
 }
 
-if (date_inicio == date_fin && month_inicio == month_fin) { eventDate.innerHTML = date_inicio + " de " + month_inicio }
+var hora = jsonData.fecha_y_hora_inicio.slice(11,16);
+if (date_inicio == date_fin && month_inicio == month_fin) {
+    if(hora == "00:00"){eventDate.innerHTML = date_inicio + " de " + month_inicio}
+    else {eventDate.innerHTML = date_inicio + " de " + month_inicio + " a las " + hora}
+}
 else { eventDate.innerHTML = "Del " + date_inicio + " de " + month_inicio + " al " + date_fin + " de " + month_fin };
 
 eventUri.innerHTML = jsonData.link

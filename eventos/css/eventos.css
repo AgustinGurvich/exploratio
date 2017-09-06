@@ -82,6 +82,10 @@ h1 {
   float:right;
 }
 
+#lupa.lupa-active {
+    background-color: lightgrey !important;
+}
+
 .titulo{
   text-align: center;
 /*   width: 100%; */
