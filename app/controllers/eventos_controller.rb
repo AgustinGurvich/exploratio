@@ -3,13 +3,14 @@ require 'json'
 
 class EventosController < ApplicationController
   def listaev
-    datosURL = URI.parse("http://ws.rosario.gov.ar/web/api/agenda.json")
+    datosURL = URI.parse("http://ws.rosario.gov.ar/web/api/agenda.json?limit=300")
     resp = Net::HTTP.start(datosURL.host, datosURL.port) {
       |http|
       http.request(Net::HTTP::Get.new(datosURL.to_s))
     }
-    @rawJson = resp.body
-
+    jObj = JSON.parse(resp.body)
+    
+    @events = jObj
   end
 
   def extensionev

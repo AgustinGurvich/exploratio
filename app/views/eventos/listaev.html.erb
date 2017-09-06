@@ -7,6 +7,29 @@
     </div>
   </div>
 
-  <div id="items">
+  <div>
+    <%@events.each_with_index do |event, i| %>
+      <%event = eventValidator(event) %>
+      <% if event["uri_imagen"] == nil then debugger end%>
+      <%if i%3 == 0 or i == 0 then%>
+         <div class="row">
+      <%end%>
+      <%if (i+2) > @events.length then%>
+        <div class="col-md-4 col-xs-4 col-lg-4"></div>
+        <div class="col-md-4 col-xs-4 col-lg-4 portfolio-item container-fluid">
+      <%else%>
+        <div class="col-md-4 col-xs-4 col-lg-4 portfolio-item container-fluid">
+        <%end%>
+        <%= image_tag(event["uri_imagen"], class: "img-responsive", style: "width: 335px; height: 150px; object-fit: cover;" )%>
+        <%= link_to("<h3>#{subString(event["title"], 20)}</h3>".html_safe, "/eventos/#{event["nid"]}")%>
+        <%= content_tag(:div, subString(event["texto"], 100))%>
+        <%if event["lugares"][0] != nil then %>
+        <%= content_tag(:span, event["lugares"][0]["nombre"], class: ["glyphicon", "glyphicon-map-marker"])%>
+        <%end%>
+      </div>
+       <%if (i+1)%3 == 0 then%>          
+          </div>
+       <%end%>
+    <%end%>
   </div>
   </body>
