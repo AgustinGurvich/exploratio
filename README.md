@@ -1,28 +1,40 @@
-<<<<<<< HEAD
-# README
+#**Proyecto  eXploratio**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*¿Que hacemos?* (Nombre provisional: Rosario virtual) es una aplicación web para encontrar eventos en Rosario, Santa fe.
+Fue desarrollada como un proyecto de sofware libre, para que cualquiera pueda desarrollar.
+Todos son libres de tomar el código y crear su propia versión.
 
-Things you may want to cover:
+##En esta versión de la app encontrarán:
+*Lista de eventos (/listaev)
+*Eventos en específico(/listaev/)
+*Creación de eventos(/crearev)
+*Páginas de inicio de sesión y creación de usuario(/login y /newuser)
+*404(/error)
 
-* Ruby version
+Es importante notar que existen muchos ###**formularios con destino nulo**
 
-* System dependencies
+##Correr la aplicación
 
-* Configuration
+####Para correr la app se necesita:
+*Ruby versión 2.4.1 o superior
+*Rails versión 5.1.3 o superior
+*Postgress (última versión)
 
-* Database creation
+-Copiar el repositorio a una carpeta propia(Recomiendo crear una específica para la aplicación)
+-Usar el comando bundle install para instalar las gemas necesarias
+-Usar el comando bundle update para asegurarse de tener la última versión de las gemas
+-Correr el servidor de Rails (rails s)
+-Abrir la ubicación en el navegador (localhost:3000 por defecto)
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-=======
-# exploratio
->>>>>>> 42cc3b6d41ffd6d15efef000429e72f95f95b845
+##Planes a futuro
+*El usuario puede crear eventos
+*Crear usuarios de tipo particular y de tipo empresa
+*Crear una lista de eventos favoritos
+*Buscar eventos
+*Elaborar un sistema de puntuación y comentarios
+*Crear un recorrido específico para cada usuario (tiempo, distancia, preferencias, etc.)
+*Mostrar las formas de llegar a un lugar
+*Integración con servicios de Google
+*Ver eventos en un mapa
+*Utilizar el proyeco en distintas ciudades
