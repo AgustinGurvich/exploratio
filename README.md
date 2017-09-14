@@ -1,6 +1,6 @@
 # **Proyecto  eXploratio**
 
-* ¿Que hacemos?* (Nombre provisional: Rosario virtual) es una aplicación web para encontrar eventos en Rosario, Santa fe.
+*¿Que hacemos?* (Nombre provisional: Rosario virtual) es una aplicación web para encontrar eventos en Rosario, Santa fe.
 Fue desarrollada como un proyecto de sofware libre, para que cualquiera pueda desarrollar.
 Todos son libres de tomar el código y crear su propia versión.
 
@@ -20,7 +20,7 @@ Es importante notar que existen muchos **formularios con destino nulo**
 * Rails versión 5.1.3 o superior
 * Postgress (última versión)
 
-- Copiar el repositorio a una carpeta propia(Recomiendo crear una específica para la aplicación)
+- Copiar el repositorio a una carpeta propia (Recomiendo crear una específica para la aplicación)
 - Usar el comando bundle install para instalar las gemas necesarias
 - Usar el comando bundle update para asegurarse de tener la última versión de las gemas
 - Correr el servidor de Rails (rails s)
