@@ -4,12 +4,12 @@
 Fue desarrollada como un proyecto de sofware libre, para que cualquiera pueda desarrollar.
 Todos son libres de tomar el código y crear su propia versión.
 
-## En esta versión de la app encontrarán:
+## En esta versión de la app encontrarán
 * Lista de eventos (/listaev)
-* Eventos en específico(/listaev/)
-* Creación de eventos(/crearev)
-* Páginas de inicio de sesión y creación de usuario(/login y /newuser)
-* 404(/error)
+* Eventos en específico (/listaev/# (#=nid del evento))
+* Creación de eventos (/crearev)
+* Páginas de inicio de sesión y creación de usuario (/login y /newuser)
+* 404 (/error)
 
 Es importante notar que existen muchos **formularios con destino nulo**
 
